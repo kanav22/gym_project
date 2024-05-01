@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.GymsharkHomework" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="postSplashScreenTheme">@style/Theme.GymsharkHomework.NoActionBar</item>
+    </style>
+
+    <style name="Theme.GymsharkHomework.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+</resources>

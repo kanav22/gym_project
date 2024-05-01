@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Gymshark Homework</string>
+    <string name="products">Products</string>
+    <plurals name="products_found">
+        <item quantity="zero">%d Products Found</item>
+        <item quantity="one">%d Product Found</item>
+        <item quantity="two">%d Products Found</item>
+        <item quantity="few">%d Products Found</item>
+        <item quantity="many">%d Products Found</item>
+        <item quantity="other">%d Products Found</item>
+    </plurals>
+
+    <string name="home_screen_title">Gymshark</string>
+
+    <string name="select_size">Select Size</string>
+    <string name="add_to_bag">ADD TO BAG</string>
+    <string name="buy_now">BUY NOW</string>
+
+
+    <string name="dismiss">DISMISS</string>
+    <string name="undo">UNDO</string>
+
+    <string name="size_xxs">XXS</string>
+    <string name="size_xs">XS</string>
+    <string name="size_s">S</string>
+    <string name="size_m">M</string>
+    <string name="size_l">L</string>
+    <string name="size_xl">XL</string>
+    <string name="size_xxl">XXL</string>
+</resources>
