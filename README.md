@@ -15,7 +15,7 @@ Modular Services: Services are located in a dedicated target, keeping the main a
 
 Jetpack Compose: We leveraged Jetpack Compose for faster UI development, enabling rapid prototyping and efficient design iterations.
 
-Dependency Injection: Dependency Injection was implemented for improved maintainability, testability, and code modularity.
+Dependency Injection: Dependency Injection with HILT was implemented for improved maintainability, testability, and code modularity.
 
 Future Enhancements (With More Time):
 
