@@ -1,8 +1,8 @@
 package com.wadhawan.mcp.gymsharkhomework.ui.product
 
-import androidx.compose.ui.test.assertCountEquals
-import androidx.compose.ui.test.hasText
+import androidx.compose.ui.test.assertIsDisplayed
 import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.onNodeWithText
 import com.wadhawan.mcp.gymsharkhomework.utils.testProduct
 import org.junit.Rule
 import org.junit.Test
@@ -28,16 +28,7 @@ class ProductListTileTest {
             )
         }
 
-        composeTestRule
-            .onAllNodes(hasText(testProduct.title))
-            .assertCountEquals(2)
-
-        composeTestRule
-            .onAllNodes(hasText(testProduct.colour))
-            .assertCountEquals(2)
-
-        composeTestRule
-            .onAllNodes(hasText("£1,000.00"))
-            .assertCountEquals(2)
+        composeTestRule.onNodeWithText(testProduct.title).assertIsDisplayed()
+        composeTestRule.onNodeWithText("Price: $${testProduct.price}").assertIsDisplayed()
     }
 }

@@ -1,52 +1,71 @@
-Gymshark Project - Android App
-This project is an Android application showcasing fitness apparel inspired by Gymshark. It leverages modern Android development tools and practices to deliver a smooth user experience.
+# Compose Commerce Catalog
 
-Project Overview:
+[![CI](https://github.com/kanav22/gym_project/actions/workflows/ci.yml/badge.svg)](https://github.com/kanav22/gym_project/actions/workflows/ci.yml)
 
-This app focuses on displaying a list of products and detailed information for each item. It prioritizes clean code architecture, maintainability, and a user-friendly interface.
+Jetpack Compose e-commerce catalog reference app — MVVM, Hilt, modular data layer, and Paparazzi golden tests.
 
-Project Decisions:
+---
 
-MVVM Architecture: The app utilizes Model-View-ViewModel (MVVM) to separate concerns between UI, data presentation, and business logic. This promotes cleaner code and easier maintenance.
+## Overview
 
-Organized Structure: The data folder holds essential files like Log, Product, Deserializer, and more, categorized for better project navigation.
+Product list and detail flows for a fitness apparel catalog. Focus areas: clean architecture, Compose UI, testability, and graceful handling of imperfect API data (missing images, HTML descriptions).
 
-Modular Services: Services are located in a dedicated target, keeping the main application focused and clean.
+## Architecture
 
-Jetpack Compose: We leveraged Jetpack Compose for faster UI development, enabling rapid prototyping and efficient design iterations.
+| Layer | Responsibility |
+|-------|----------------|
+| **UI** | Compose screens, navigation, design tokens |
+| **ViewModel** | UI state, user actions, repository orchestration |
+| **Data** | Repositories, deserialization, mock/CDN data sources |
+| **DI** | Hilt modules for repositories and services |
 
-Dependency Injection: Dependency Injection with HILT was implemented for improved maintainability, testability, and code modularity.
+**Stack:** Kotlin · Jetpack Compose · Hilt · Navigation Compose · Coil · Gson · Timber · Paparazzi
 
-Future Enhancements (With More Time):
+## Features
 
-Product Search:
-Implement a search bar for convenient product filtering by text.
-Add additional filters based on type (e.g., leggings, bra) and price range for improved user experience.
-Product Details:
-Include suggested items in the same category at the bottom of the product details page, similar to the Gymshark website, to increase user engagement.
-Implement functional wishlist and basket features for a seamless shopping experience.
-Development:
-Design dedicated wishlist and basket views to enhance user interaction.
-Expand test coverage with Snapshot and UI tests for code robustness and reliability.
-Integrate a local database to store user details, refreshing only when necessary for optimized performance.
-Prioritize accessibility considerations to ensure inclusivity and ease of use for all users.
-Requirements:
+- Product list with title, price, color, and image handling (placeholder on failure)
+- Product detail with HTML description parsing
+- Enum-driven product state labels
+- Golden snapshot tests for key screens
 
-The app focuses on two main functionalities:
+## Getting Started
 
-Search List:
-Displays a list of products with detailed information like title, price, color, etc.
-Handles incorrect or missing images gracefully (e.g., displaying a placeholder).
-Utilizes Enums to represent different product states and display labels accordingly.
-Product Details:
-Provides comprehensive information retrieved from the product data.
-Properly parses HTML text within the description for seamless presentation.
-API/Responses:
+### Prerequisites
 
-<img width="342" alt="gymshark_1" src="https://github.com/kanav22/gym_project/assets/5936688/f3b3581c-74af-4d35-80d2-9c07ca72abec">
-<img width="327" alt="gymshark_2" src="https://github.com/kanav22/gym_project/assets/5936688/b9f2edf4-19d5-4f11-9bab-3c0afda9a2bb">
-<img width="337" alt="gymshark_3" src="https://github.com/kanav22/gym_project/assets/5936688/5e6cccf2-fc6f-4154-8d72-207030bd8393">
+- Android Studio Hedgehog or newer
+- JDK 17+
+- Android SDK 34
 
+### Build & Run
 
+```bash
+./gradlew assembleDebug
+./gradlew installDebug
+```
 
+### Tests
 
+```bash
+./gradlew testDebugUnitTest    # unit, Compose UI, and Paparazzi golden tests
+```
+
+## CI
+
+GitHub Actions runs unit tests and `assembleDebug` on every push and pull request to `main`.
+
+## Screenshots
+
+<img width="342" alt="Product list" src="https://github.com/kanav22/gym_project/assets/5936688/f3b3581c-74af-4d35-80d2-9c07ca72abec">
+<img width="327" alt="Product detail" src="https://github.com/kanav22/gym_project/assets/5936688/b9f2edf4-19d5-4f11-9bab-3c0afda9a2bb">
+<img width="337" alt="Product detail variant" src="https://github.com/kanav22/gym_project/assets/5936688/5e6cccf2-fc6f-4154-8d72-207030bd8393">
+
+## Roadmap
+
+- Product search and filters (type, price range)
+- Wishlist and basket flows
+- Room/local cache for offline browsing
+- Expanded accessibility coverage
+
+## License
+
+MIT — see [LICENSE](LICENSE).
