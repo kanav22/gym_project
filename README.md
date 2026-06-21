@@ -1,6 +1,7 @@
 # Compose Commerce Catalog
 
-[![CI](https://github.com/kanav22/gym_project/actions/workflows/ci.yml/badge.svg)](https://github.com/kanav22/gym_project/actions/workflows/ci.yml)
+[![CI](https://github.com/kanav22/compose-commerce-catalog/actions/workflows/ci.yml/badge.svg)](https://github.com/kanav22/compose-commerce-catalog/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 Jetpack Compose e-commerce catalog reference app — MVVM, Hilt, modular data layer, and Paparazzi golden tests.
 
